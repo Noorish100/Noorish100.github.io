@@ -279,16 +279,16 @@
                     <div class="contact-form reveal">
                         <h3>Send Message</h3>
                         <div class="input-box">
-                            <input type="text" name="" value="" placeholder="Name">
+                            <input id="n" type="text" name="" value="" placeholder="Name">
                         </div>
                         <div class="input-box">
-                            <input type="text" name="" value="" placeholder="Email">
+                            <input id="email" type="text" name="" value="" placeholder="Email">
                         </div>
                         <div class="input-box">
-                            <textarea name="name" rows="8" cols="80" placeholder="Message"></textarea>
+                            <textarea id="t" name="name" rows="8" cols="80" placeholder="Message"></textarea>
                         </div>
-                        <div class="input-box">
-                            <input type="submit" class="send-btn" name="" value="Send">
+                        <div  class="input-box">
+                            <button id="email" onclick="sendEmail(); reset(); return false;" type="submit" class="send-btn" name="" value="Send">submit</button>
                         </div>
                     </div>
                 </div>
@@ -301,7 +301,7 @@
 
 
     <!-- FOOTER -->
-
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="script.js"></script>
 
 </body>

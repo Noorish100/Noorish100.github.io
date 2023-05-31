@@ -7,6 +7,9 @@ window.addEventListener("scroll", function(){
   const menuBtn = document.querySelector(".menu-btn");
   const navigation = document.querySelector(".navigation");
   const navigationItems = document.querySelectorAll(".navigation a")
+  const email=document.querySelectorAll(".email")
+
+
   var c=0
   menuBtn.addEventListener("click", () => {
 
@@ -63,4 +66,22 @@ window.addEventListener("scroll", function(){
         reveals[i].classList.add("active");
       }
     }
+  }
+
+  function sendEmail(){
+    Email.send({
+      Host : "smtp.elasticemail.com",
+      Username : "noorezhberg@gmail.com",
+      Password : "F8865D977952C1506A887AE5DC30A37D2125",
+      From :  'noorezhberg@gmail.com',//username from 
+      //  To: 'mdnoorishnauman@gmail.com',//prefered email addresss.
+      ReplyFrom : document.getElementById("email").value,
+      To : 'mdnoorishnauman@gmail.com',
+      // From : document.getElementById("email").value,
+      Subject : "Portfolio Message",
+      Body :"emailId:  "+document.getElementById("email").value+" \n "+"Name:  "+document.getElementById("n").value+" \n "+"text: "+document.getElementById("t").value,
+       
+  }).then(
+    message => alert("Your details has been sent")
+  );
   }
